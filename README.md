@@ -6,7 +6,19 @@
 ---
 ## Procedure
 - Acquire telco dataset from MySQLWorkbench
-- prepare data by removing excessive features
+- prepare data
+  - remove excessive columns
+  - fill null values
+- explore date in search of key drivers for churn
+- try to answer leading questions
+ - how often does churn occur?
+ - is churn rate dependent on monthly charge?
+ - does having benefits reduce churn rate?
+- Develop a model to accurately predict if customers will churn
+- - Use identified drivers to predict churn
+  - evaluate models using training and validate sets
+  - Determine optimal model on accuracy
+  - Run test set on optimal model
 ---
 ## Data Dictionary
 | Feature | Definition | 
@@ -26,3 +38,14 @@
 | <font color='red'>Has Internet Service</font> | If a customer has internet service, 0 = No, 1 = Yes |
 | Churn (Target) | If a customer has churned, False = No, True = Yes |
 ---
+## Steps to Replicate
+- Clone this repo.
+- Acquire the Telco data from MySQLWorkbench
+- Put the data in the file containing the cloned repo.
+- Run notebook.
+---
+## Conclusions
+- About 26% of customers churn currently
+- Out of that 26%, we can significantly reduce churn rate by moving customers to a yearly contract instead of a monthly one.
+- Having internet service actually made churn rate worse.
+- Stronger drivers may become more prevalent if we can isolate yearly contracts from monthly ones.
